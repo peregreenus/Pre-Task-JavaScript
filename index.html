@@ -6,12 +6,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Task JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
+        <header class="header">
+            <img src="img/avatar.jpg" alt="avatar">
+            <div class="introduce">
+                <h1>Александр Андрейчук</h1>
+                <span>Начинающий фронтенд-разработчик</span>
+            </div>
+        </header>
+        <main class="personal__info">
+            <section class="personal__info-block left">
+                <div class="info__item skills">
+                    <table class="info__item-table">
+                        <tbody>
+                            <th class="info__item-title">НАВЫКИ</th>
+                            <tr>
+                                <th>Технология</th>
+                                <th>Уровень</th>
+                            </tr>
+                            <tr>
+                                <td>HTML5</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="75"></meter>
+                                    <span>75/100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="75"></meter>
+                                    <span>75/100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="65"></meter>
+                                    <span>65/100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>GIT</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="60"></meter>
+                                    <span>60/100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BASH / POWERSHELL</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="70"></meter>
+                                    <span>70/100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SASS</td>
+                                <td>
+                                    <meter min="0" max="100" low="35" high="70" optimum="100" value="50"></meter>
+                                    <span>50/100</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
+                <div class="info__item education">
+                    <table class="info__item-table">
+                        <tbody>
+                            <th class="info__item-title">НАВЫКИ</th>
+                            <tr>
+                                <th>Учреждение образования</th>
+                                <th>Факультет</th>
+                                <th>Год окончания</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://mspu.by/index.php" target="_blank">МГПУ им. Шамякина</a>
+                                </td>
+                                <td>Филологический</td>
+                                <td>2018</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="personal__info-block right">
+                <div class="info__item about">
+                    <h4 class="info__item-title">О СЕБЕ</h4>
+                    <p class="info__item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod animi harum eveniet consequatur
+                        voluptatibus atque nihil, ducimus sint, veritatis quae laborum vitae id minima similique
+                        accusamus quis, facere culpa. Delectus.
+                    </p>
+            </section>
+        </main>
+        <section class="personal__form">
+            <form id="form" action="#">
+                <label for="comment">КОММЕНТАРИЙ</label>
+                <textarea id="comment" title="КОММЕНТАРИЙ"></textarea>
+                <label for="phone-number">НОМЕР ТЕЛЕФОНА</label>
+                <input id="phone-number" type="text">
+                <button class="form-btn">ПРОВЕРИТЬ</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <div class="footer__info">
+                <div class="footer__info-links">
+                    <span><a href="#"></a>GitHub</span>
+                    <span><a href="#"></a>VK</span>
+                    <span><a href="#"></a>Telegram</span>
+                </div>
+                <div class="footer__info-copy">
+                    &copy;Andreichuk Aliaksandr
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="main.js"></script>
