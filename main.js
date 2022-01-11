@@ -41,7 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 comment = textarea.value;
                 textarea.value = '';
             }
-            // console.log(comment);
 
             const regExpPhone = /\+(375)(33|29|44|25)(\d{7})$/;
             let regExpResult = regExpPhone.test(input.value);

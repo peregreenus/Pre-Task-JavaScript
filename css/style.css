@@ -59,21 +59,40 @@ a {
 
 .personal__info {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    flex-wrap: wrap;
+    margin: 0 0 40px;
 }
 
-.personal__info-block {
+.personal__info-block.right,
+.info__item.skills,
+.info__item.education {
     box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.7);
     padding: 25px;
-    width: 42%;
+    width: 45%;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 40px;
+}
+
+.personal__info-block.left {
+    width: 40%;
+    height: 100%;
 }
 
 .info__item {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.info__item.skills,
+.info__item.education {
+    width: 100%;
+    display: inline-block;
+    min-width: 400px;
+}
+
+.info__item.education {
+    height: 25%;
+    margin: 0;
 }
 
 .info__item-title {
@@ -88,6 +107,9 @@ a {
 .info__item-table {
     width: 100%;
     border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
 }
 
 .info__item-table thead {
@@ -102,16 +124,25 @@ a {
 .info__item-table tbody th {
     color: #fff;
     height: 2em;
-    vertical-align: top;
+    vertical-align: middle;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .info__item-table tbody th:first-child {
-    text-align-last: left;
+    text-align: left;
+}
+
+.info__item-table tbody td:first-child {
+    padding-top: 10px;
 }
 
 .info__item-table meter {
     height: 20px;
     width: 100px;
+}
+
+.info__item-table tr {
+    padding: 3px;
 }
 
 .info__item-table td {
