@@ -145,6 +145,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 #comment {
@@ -167,6 +168,24 @@ a {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
+}
+
+#phone-number::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all ease-in .5s;
+}
+
+.tooltip-visible {
+    opacity: 1;
 }
 
 .form-btn {
