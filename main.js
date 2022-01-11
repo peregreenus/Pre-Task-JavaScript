@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
         input.insertAdjacentElement('afterend', message);
         setTimeout(() => {
             message.classList.remove('message-visible');
-        }, 1500);
+        }, 1000);
 
     };
 
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            if (textarea.value === '') {
+            if (textarea.value === '' || textarea.value === myEmail) {
                 textarea.value = myEmail;
             } else {
                 comment = textarea.value;
