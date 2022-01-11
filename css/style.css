@@ -174,17 +174,20 @@ a {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.tooltip {
+.tooltip,
+.message {
     position: absolute;
+    top: 105px;
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.5);
     color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     opacity: 0;
-    transition: all ease-in .5s;
+    transition: all ease-in .7s;
 }
 
-.tooltip-visible {
+.tooltip-visible,
+.message-visible {
     opacity: 1;
 }
 

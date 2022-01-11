@@ -8,24 +8,52 @@ window.addEventListener('DOMContentLoaded', () => {
     const myEmail = 'coldlycalculatedsoul@gmail.com';
     let comment;
 
-    // form.addEventListener('submit', (e) => {
-    //     e.preventDefault();
 
-    //     if (textarea.value === '') {
-    //         textarea.value = myEmail;
-    //     } else {
-    //         comment = textarea.value;
-    //         textarea.value = '';
-    //     }
+    // VALIDATION -------------------------------------->
 
-    //     // console.log(comment);
-    //     checkPhoneNumber();
-    // });
+    const createValidateMessage = (result) => {
+        let message = document.createElement('span');
+        message.classList.add('message', 'message-visible');
 
-    // function checkPhoneNumber() {
-    //     input.setAttribute('pattern', '/+[375]/');
-    //     console.log(input.getAttribute('pattern'));
-    // }
+
+        if (!result) {
+            message.textContent = 'Номер введен неверно';
+        } else {
+            message.textContent = 'Номер введен верно';
+        }
+
+
+        input.insertAdjacentElement('afterend', message);
+        setTimeout(() => {
+            message.classList.remove('message-visible');
+        }, 1500);
+
+    };
+
+
+    const validateForm = () => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (textarea.value === '') {
+                textarea.value = myEmail;
+            } else {
+                comment = textarea.value;
+                textarea.value = '';
+            }
+            // console.log(comment);
+
+            const regExpPhone = /\+(375)(33|29|44|25)(\d{7})$/;
+            let regExpResult = regExpPhone.test(input.value);
+
+
+            createValidateMessage(regExpResult);
+
+            input.value = '';
+        });
+    };
+
+    validateForm();
 
 
     // TOOLTIP ------------------------------------------>
